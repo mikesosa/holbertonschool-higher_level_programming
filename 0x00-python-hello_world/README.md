@@ -46,6 +46,10 @@
 							<td><code>5-print_string.py</code></td>
 							<td>Python script that prints a string</td>
 						</tr>
+						<tr>
+							<td><code>6-concat.py</code></td>
+							<td>Concatenates strings</td>
+						</tr>
 					</tbody>
 				</table>
 				<hr>
