@@ -30,6 +30,10 @@
 							<td><code>1-run_inline</code></td>
 							<td>Bash script that passes a varable that stores a command of python.</td>
 						</tr>
+						<tr>
+							<td><code>2-print.py</code></td>
+							<td>Python script that prints a stence and scapes an special char.</td>
+						</tr>
 					</tbody>
 				</table>
 				<hr>
