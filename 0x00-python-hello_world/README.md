@@ -26,6 +26,10 @@
 							<td><code>0-run</code></td>
 							<td>Bash script that passes a variable that contains a file to our python.</td>
 						</tr>
+						<tr>
+							<td><code>0-run_inline</code></td>
+							<td>Bash script that passes a varable that stores a command of python.</td>
+						</tr>
 					</tbody>
 				</table>
 				<hr>
