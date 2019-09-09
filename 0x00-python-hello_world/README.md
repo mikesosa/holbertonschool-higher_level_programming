@@ -42,6 +42,10 @@
 							<td><code>4-print_float.py</code></td>
 							<td>Python script that prints a float with only 2 digits</td>
 						</tr>
+						<tr>
+							<td><code>5-print_string.py</code></td>
+							<td>Python script that prints a string</td>
+						</tr>
 					</tbody>
 				</table>
 				<hr>
