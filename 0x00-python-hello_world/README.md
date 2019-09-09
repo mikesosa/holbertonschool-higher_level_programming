@@ -34,6 +34,10 @@
 							<td><code>2-print.py</code></td>
 							<td>Python script that prints a stence and scapes an special char.</td>
 						</tr>
+						<tr>
+							<td><code>3-print_number.py</code></td>
+							<td>Python scripts that prints and string and concatenates a numbr</td>
+						</tr>
 					</tbody>
 				</table>
 				<hr>
