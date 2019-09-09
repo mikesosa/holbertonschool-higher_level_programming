@@ -50,6 +50,10 @@
 							<td><code>6-concat.py</code></td>
 							<td>Concatenates strings</td>
 						</tr>
+						<tr>
+							<td><code>7-edges.py</code></td>
+							<td>Cutting strings and concatenating</td>
+						</tr>
 					</tbody>
 				</table>
 				<hr>
