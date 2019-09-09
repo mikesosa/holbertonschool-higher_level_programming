@@ -38,6 +38,10 @@
 							<td><code>3-print_number.py</code></td>
 							<td>Python scripts that prints and string and concatenates a numbr</td>
 						</tr>
+						<tr>
+							<td><code>4-print_float.py</code></td>
+							<td>Python script that prints a float with only 2 digits</td>
+						</tr>
 					</tbody>
 				</table>
 				<hr>
