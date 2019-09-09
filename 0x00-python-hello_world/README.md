@@ -58,6 +58,10 @@
 							<td><code>8-concat_edges.py</code></td>
 							<td>Cutting strings and concatenating</td>
 						</tr>
+						<tr>
+							<td><code>9-easter_egg.py</code></td>
+							<td>Cool, printing the zen of Python</td>
+						</tr>
 					</tbody>
 				</table>
 				<hr>
