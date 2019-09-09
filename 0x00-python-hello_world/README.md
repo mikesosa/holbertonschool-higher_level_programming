@@ -54,6 +54,36 @@
 							<td><code>7-edges.py</code></td>
 							<td>Cutting strings and concatenating</td>
 						</tr>
+						<tr>
+							<td><code>8-concat_edges.py</code></td>
+							<td>Cutting strings and concatenating</td>
+						</tr>
+					</tbody>
+				</table>
+				<hr>
+				<h3>
+					Technologies Used
+				</h3>
+				<ul>
+					<li>Language: Python, C, Bash</li>
+					<li>Operating System: Ubuntu 14.04 LTS (Trusty64)</li>
+					<li>Style: PEP8 (pycodestyle)</li>
+					<li>Compiler: gcc 4.8.4 with flags -Wall -Werror -Wextra -pedantic</li>
+					<li>Version Control: Git</li>
+				</ul>
+				<hr>
+				<h3>
+					Authors Social Media
+				</h3>
+				<p>Michael Sosa <a href="https://www.linkedin.com/in/michael-sosa/" rel="nofollow">Linkedin</a> || <a href="https://twitter.com/micael_sosa" rel="nofollow">Twitter: @micael_sosa</a></p>
+				<hr>
+			</article>
+	</body>
+</html>
+						<tr>
+							<td><code>7-edges.py</code></td>
+							<td>Cutting strings and concatenating</td>
+						</tr>
 					</tbody>
 				</table>
 				<hr>
