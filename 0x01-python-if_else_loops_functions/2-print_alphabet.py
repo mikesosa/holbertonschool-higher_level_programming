@@ -2,4 +2,4 @@
 for i in range(97, 123):
     asciToLetter = chr(i)
     a = "" + asciToLetter
-    print(asciToLetter, end='')
+    print("{}".format(a), end='')
