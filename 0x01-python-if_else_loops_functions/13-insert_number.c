@@ -13,20 +13,20 @@ listint_t *insert_node(listint_t **head, int number)
 	listint_t *new;
 	listint_t *temp = *head;
 
-	new = malloc(sizeof(listint_t));/*We create the new node*/
+	new = malloc(sizeof(listint_t));
 	if (!new || !head)
 		return (NULL);
 	new->n = number;
-	if (!*head)/*if head is the last then put the number before*/
+	/* if the value of head is equal to NULL then we place new before it */
+	if (!*head)
 	{
 		new->next = *head;
 		*head = new;
 		return (new);
 	}
-	while (temp)/*While head has a value do this*/
+	while (temp)
 	{
-		/*If numbes is greather than head but less than the next head*/
-		if ((temp->n <= number) && (temp->n && (temp->next->n >= number)))
+		if ((temp->n <= number) && (temp->next && (temp->next->n >= number)))
 		{
 			new->next = temp->next;
 			temp->next = new;
@@ -34,7 +34,6 @@ listint_t *insert_node(listint_t **head, int number)
 		}
 		else if (temp->n <= number && !(temp->next))
 		{
-			printf("entro");
 			new->next = NULL;
 			temp->next = new;
 			return (new);
