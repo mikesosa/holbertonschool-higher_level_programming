@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 def square_matrix_simple(matrix=[]):
     s1 = []
     s2 = []
@@ -16,4 +14,4 @@ def square_matrix_simple(matrix=[]):
             if len(s3) < 3:
                 s3 += [j**2]
                 continue
-    return(s1, s2, s3)
+    return [s1, s2, s3]
