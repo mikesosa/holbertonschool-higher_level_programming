@@ -12,7 +12,7 @@ def roman_to_int(roman_string):
     future = 0
     present = 0
 
-    if roman_string is None:
+    if type(roman_string) is not str or roman_string is None:
         return 0
     if len(roman_string) is 1:
         return my_dic(roman_string[0])
