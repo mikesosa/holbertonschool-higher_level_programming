@@ -4,10 +4,8 @@ def weight_average(my_list=[]):
     domminant = 0
 
     if not my_list:
-        return None
+        return 0
     for i in my_list:
-        if not i:
-            return None
         last += i[-1]
     domminant = sum([a * b for a, b in my_list])
     return domminant / last
