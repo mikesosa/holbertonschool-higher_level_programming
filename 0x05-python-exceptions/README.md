@@ -3,7 +3,7 @@
 	<body>
 			<article>
 				<h1>
-					Python - More Data Structures: Set, Dictionary
+					Python - Exceptions
 				</h1>
 				<h2>
 					Introduction
