@@ -1,4 +1,4 @@
-#!/usr/lib/python3
+#!/usr/bin/python3
 class Rectangle:
     """
         Class that defines a Rectangle
