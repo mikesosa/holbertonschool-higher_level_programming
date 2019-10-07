@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 class Rectangle:
     """
-        Class that defines a Rectangle
+        initialize with the width and height with value checks
     """
+
     number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
         self.__class__.number_of_instances += 1
 
     @property
@@ -18,7 +19,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         if type(value) is not int:
-            raise TypeError("width must be an integeri")
+            raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
@@ -30,31 +31,31 @@ class Rectangle:
     @height.setter
     def height(self, value):
         if type(value) is not int:
-            raise TypeError("width must be an integeri")
-            return
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("width must be >= 0")
-            return
+            raise ValueError("height must be >= 0")
         self.__height = value
 
     def area(self):
-        area = self.__width * self.__height
-        return area
+        """ calculates the area of this rekt """
+        return self.__width * self.__height
 
     def perimeter(self):
+        """ calculates the perimeter of this rect """
         if self.__width is 0 or self.__height is 0:
             return 0
-        perimeter = self.__width + self.__height + self.__width + self.__height
-        return perimeter
+        return (self.__width) * 2 + (self.__height * 2)
 
     def __str__(self):
-        new_str = ""
+        string = ""
+        if self.__width is 0 or self.__height is 0:
+            return string
         for i in range(self.__height):
             for j in range(self.__width):
-                new_str = new_str + str(self.print_symbol)
-            if i < (self.__height - 1):
-                new_str = new_str + "\n"
-        return new_str
+                string += str(self.print_symbol)
+            if i is not self.__height - 1:
+                string += "\n"
+        return string
 
     def __repr__(self):
         return ("Rectangle({}, {})".format(self.__width, self.__height))
@@ -63,7 +64,6 @@ class Rectangle:
         self.__class__.number_of_instances -= 1
         print("Bye rectangle...")
 
-    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         if type(rect_1) is not Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
@@ -75,5 +75,4 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        x, y = size, size
-        return cls(x, y)
+        return cls(size, size)
