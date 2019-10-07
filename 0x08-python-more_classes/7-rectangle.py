@@ -4,6 +4,7 @@ class Rectangle:
         Class that defines a Rectangle
     """
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         self.__width = width
@@ -52,7 +53,7 @@ class Rectangle:
         new_str = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                new_str = new_str + "#"
+                new_str = new_str + str(self.print_symbol)
             if i < (self.__height - 1):
                 new_str = new_str + "\n"
         return new_str

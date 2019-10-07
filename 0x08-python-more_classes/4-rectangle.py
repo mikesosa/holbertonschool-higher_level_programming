@@ -46,13 +46,13 @@ class Rectangle:
         return perimeter
 
     def __str__(self):
-        str = ""
+        new_str = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                str = str + "#"
+                new_str = new_str + "#"
             if i < (self.__height - 1):
-                str = str + "\n"
-        return str
+                new_str = new_str + "\n"
+        return new_str
 
     def __repr__(self):
         return ("Rectangle({}, {})".format(self.__width, self.__height))
