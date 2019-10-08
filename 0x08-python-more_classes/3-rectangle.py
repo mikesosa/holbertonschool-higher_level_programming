@@ -32,22 +32,20 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        area = self.__width * self.__height
-        return area
+        return self.__width * self.__height
 
     def perimeter(self):
         if self.__width is 0 or self.__height is 0:
             return 0
-        perimeter = self.__width + self.__height + self.__width + self.__height
-        return perimeter
+        return (self.__width) * 2 + (self.__height * 2)
 
     def __str__(self):
-        new_str = ""
+        string = ""
         if self.__width is 0 or self.__height is 0:
             return string
         for i in range(self.__height):
             for j in range(self.__width):
-                new_str = new_str + "#"
-            if i < (self.__height - 1):
-                new_str = new_str + "\n"
-        return new_str
+                string += "#"
+            if i is not self.__height - 1:
+                string += "\n"
+        return string
