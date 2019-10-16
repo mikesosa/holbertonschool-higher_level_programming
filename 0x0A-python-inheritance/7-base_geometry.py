@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-""" Module has class BaseGeometry """
+""" module that makes the class BaseGeometry """
 
 
 class BaseGeometry:
-    """I'll be 30 next year :v"""
+    """ I wanna eat. im hungry. """
 
     def area(self):
-        """Raises error"""
+        """ raises error """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """Cheks if value is integer"""
+        """ error checks """
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError("{} must be greather than 0".format(name))
+            raise ValueError("{} must be greater than 0".format(name))
