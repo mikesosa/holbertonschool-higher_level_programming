@@ -28,9 +28,4 @@ class Student:
     def reload_from_json(self, json):
         """Replacing values of a class from dict"""
         for item in json:
-            if item is "first_name":
-                self.first_name = json.get("first_name")
-            elif item is "last_name":
-                self.last_name = json.get("last_na,e")
-            elif item is "age":
-                self.age = json.get("age")
+            self.__dict__.update({item: json.get(item)})
