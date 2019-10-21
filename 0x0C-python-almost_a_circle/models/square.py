@@ -27,6 +27,7 @@ class Square(Rectangle):
         self.__width = value
         self.__height = value\
 
+
     def update(self, *args, **kwargs):
         """Update square method"""
         if args is not None and len(args):
@@ -55,7 +56,7 @@ class Square(Rectangle):
     def to_dictionary(self):
         """Returns a description on a dict"""
         my_dict = {
-            'id': self.id, 
+            'id': self.id,
             'size': self.width,
             'x': self.x,
             'y': self.y

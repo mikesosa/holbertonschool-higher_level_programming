@@ -2,7 +2,6 @@
 import json
 
 
-
 class Base:
 
     _nb_objects = 0
@@ -30,7 +29,8 @@ class Base:
             for i in list_objs:
                 ls.append(cls.to_dictionary(i))
         x = cls.to_json_string(ls)
-        with open("{}.json".format(cls.__name__), mode="w", encoding="utf-8") as f:
+        with open("{}.json".format(cls.__name__),
+                  mode="w", encoding="utf-8") as f:
             f.write(x)
 
     @staticmethod
@@ -54,7 +54,8 @@ class Base:
     def load_from_file(cls):
         ls = []
         try:
-            with open("{}.json".format(cls.__name__), mode="r", encoding='utf-8') as f:
+            with open("{}.json".format(cls.__name__),
+                      mode="r", encoding='utf-8') as f:
                 temp = cls.from_json_string(f.read())
         except:
             return []

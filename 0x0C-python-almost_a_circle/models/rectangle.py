@@ -118,11 +118,10 @@ class Rectangle(Base):
                 elif key == "y":
                     self.y = kwargs["y"]
 
-
     def to_dictionary(self):
         """Returns a description on a dict"""
         my_dict = {
-            'id': self.id, 
+            'id': self.id,
             'width': self.width,
             'height': self.height,
             'x': self.x,
