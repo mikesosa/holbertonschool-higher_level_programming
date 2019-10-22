@@ -1,81 +1,89 @@
 #!/usr/bin/python3
-"""Containf class rectangle"""
+""" rectangle module """
 
 from models.base import Base
 
 
 class Rectangle(Base):
+    """ class Rectangle inherits from Base """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ Initializers"""
+        """ initializer """
         super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
 
+    def typeChecker(self, name, value):
+        """ integer validation check """
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(name))
+
+    def valueWHChecker(self, name, value):
+        """ width and height validation check """
+        if value <= 0:
+            raise ValueError("{} must be > 0".format(name))
+
+    def valueXYChecker(self, name, value):
+        """ x and y validation check """
+        if value < 0:
+            raise ValueError("{} must be >= 0".format(name))
+
     @property
     def width(self):
-        """width getter"""
+        """ getter width """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """ width setter, and validation"""
-        if type(value) is not int:
-            raise TypeError("width must be an integer")
-        if value <= 0:
-            raise ValueError("width must be > 0")
+        """ width setter, gets validated """
+        self.typeChecker("width", value)
+        self.valueWHChecker("width", value)
         self.__width = value
 
     @property
     def height(self):
-        """height getter"""
+        """ getter height """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """height setter, and validation"""
-        if type(value) is not int:
-            raise TypeError("height must be an integer")
-        if value <= 0:
-            raise ValueError("height must be > 0")
+        """ height setter, gets validated """
+        self.typeChecker("height", value)
+        self.valueWHChecker("height", value)
         self.__height = value
 
     @property
     def x(self):
-        """x getter"""
+        """ getter for x """
         return self.__x
 
     @x.setter
     def x(self, value):
-        """x setter, and validation"""
-        if type(value) is not int:
-            raise TypeError("x must be an integer")
-        if value < 0:
-            raise ValueError("x must be >= 0")
+        """ X setter, gets validated """
+        self.typeChecker("x", value)
+        self.valueXYChecker("x", value)
         self.__x = value
 
     @property
     def y(self):
-        """y getter"""
+        """ getter for y """
         return self.__y
 
     @y.setter
     def y(self, value):
-        """y setter, and validation"""
-        if type(value) is not int:
-            raise TypeError("y must be an integer")
-        if value < 0:
-            raise ValueError("y must be >= 0")
+        """ Y setter, gets validated """
+        self.typeChecker("y", value)
+        self.valueXYChecker("y", value)
         self.__y = value
 
     def area(self):
-        """Calculates the area"""
-        return self.__width * self.__height
+        """ calcualtes the area """
+        return self.width * self.height
 
     def display(self):
-        """Prints to stdout the recatangle with '#' char"""
+        """ shows a display of #s """
         for i in range(self.y):
             print()
         for i in range(self.height):
@@ -87,25 +95,26 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        """Returns a description of the rectangle"""
-        return "[Rectangle] ({}) {}/{}\
- - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        """ overwrites the str """
+        return("[{}] ({}) {}/{} - {}/{}".format(
+            str(self.__class__.__name__), self.id, self.x,
+            self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
-        """Updating rectangle"""
+        """ the update function """
         if args is not None and len(args):
-            for i, value in enumerate(args):
-                if i is 0:
+            for index, value in enumerate(args):
+                if index is 0:
                     self.id = value
-                elif i is 1:
+                elif index is 1:
                     self.width = value
-                elif i is 2:
+                elif index is 2:
                     self.height = value
-                elif i is 3:
+                elif index is 3:
                     self.x = value
-                elif i is 4:
+                elif index is 4:
                     self.y = value
-                else:
+                elif index >= 5:
                     raise Exception("Too many arguments")
         else:
             for key in kwargs:
@@ -121,12 +130,11 @@ class Rectangle(Base):
                     self.y = kwargs["y"]
 
     def to_dictionary(self):
-        """Returns a description on a dict"""
-        my_dict = {
-            'id': self.id,
-            'width': self.width,
-            'height': self.height,
-            'x': self.x,
-            'y': self.y
-        }
-        return my_dict
+        """ returns the dict representation of a rect """
+        temp = {}
+        temp['id'] = self.id
+        temp['width'] = self.width
+        temp['height'] = self.height
+        temp['x'] = self.x
+        temp['y'] = self.y
+        return temp
