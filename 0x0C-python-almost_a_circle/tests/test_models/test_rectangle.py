@@ -181,20 +181,6 @@ class Test_Rectangle(unittest.TestCase):
         self.assertTrue(isinstance(x, list))
         self.assertTrue(isinstance(x[0], Rectangle))
 
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-
     def test_checker(self):
         """ testing basic shit """
         test1 = Rectangle(1, 2)

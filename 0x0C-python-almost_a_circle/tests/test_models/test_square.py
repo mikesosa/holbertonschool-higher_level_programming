@@ -186,20 +186,6 @@ class Test_Square(unittest.TestCase):
         self.assertTrue(isinstance(x, list))
         self.assertTrue(isinstance(x[0], Square))
 
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-    """ POST CHECKER """
-
     def test_checker(self):
         """ testing basic shit """
         test1 = Square(1)
