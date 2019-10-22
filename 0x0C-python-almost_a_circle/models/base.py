@@ -1,12 +1,16 @@
 #!/usr/bin/python3
+"""Modula has base for all other classes"""
+
 import json
 
 
 class Base:
+    """BaseClass for classes"""
 
     _nb_objects = 0
 
     def __init__(self, id=None):
+        """Constructor/Initializer"""
         if id is not None:
             self.id = id
         else:
@@ -15,13 +19,14 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """ Returns json of a dictionary """
         if list_dictionaries is None or not len(list_dictionaries):
             return "[]"
-        else:
-            return json.dumps(list_dictionaries)
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """writes json string to a file"""
         ls = []
         if list_objs is None or not len(list_objs):
             pass
@@ -35,6 +40,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """returns the list of a json string"""
         if json_string is None or not len(json_string):
             return "[]"
         else:
@@ -52,6 +58,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """Returns a list of instances"""
         ls = []
         try:
             with open("{}.json".format(cls.__name__),

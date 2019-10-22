@@ -33,3 +33,22 @@ class TestBase(unittest.TestCase):
         self.assertEqual(x.id, 2)
         x = Base()
         self.assertEqual(x.id, 3)
+
+    def test_weird(self):
+        """ test wtf things """
+        x = Base(4)
+        self.assertEqual(4, x.id)
+        x = Base([1, 2])
+        self.assertEqual([1, 2], x.id)
+        x = Base([1, "2"])
+        self.assertEqual([1, '2'], x.id)
+        x = Base([1, [1, 2]])
+        self.assertEqual([1, [1, 2]], x.id)
+        x = Base({"goku": 2})
+        self.assertEqual({"goku": 2}, x.id)
+        x = Base((1, 2))
+        self.assertEqual((1, 2), x.id)
+        x = Base(1)
+        self.assertEqual(1, x.id)
+        x = Base()
+        self.assertEqual(4, x.id)
