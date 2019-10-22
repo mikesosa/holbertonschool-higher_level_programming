@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+""" Description of the module"""
+
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """ all sides same size """
 
     def __init__(self, size, x=0, y=0, id=None):
         """Initialization"""
@@ -15,6 +18,7 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """ the getter for size """
         return self.width
 
     @size.setter
