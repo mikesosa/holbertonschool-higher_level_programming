@@ -4,7 +4,7 @@ from models.base import Base
 import unittest
 
 
-class TestBase(unittest.TestCase):
+class Test_Base(unittest.TestCase):
 
     def test_int(self):
         x = Base(33)
@@ -52,3 +52,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual(1, x.id)
         x = Base()
         self.assertEqual(4, x.id)
+
+if __name__ == "__main__":
+    unittest.main()
