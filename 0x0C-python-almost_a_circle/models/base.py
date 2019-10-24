@@ -2,7 +2,8 @@
 """ module and base of all other classes """
 
 import json
-
+import turtle
+import time
 
 class Base():
     """ BaseClass of all other classes """
@@ -81,6 +82,53 @@ class Base():
         pass
 
     @staticmethod
+    def createRectangle(i, shape):
+        shape.forward(i.width)
+        shape.right(90)
+        shape.forward(i.height)
+        shape.right(90)
+        shape.forward(i.width)
+        shape.right(90)
+        shape.forward(i.height)
+        shape.right(90)
+
+    @staticmethod
+    def createSquare(i, shape):
+        shape.forward(i.size)
+        shape.right(90)
+        shape.forward(i.size)
+        shape.right(90)
+        shape.forward(i.size)
+        shape.right(90)
+        shape.forward(i.size)
+        shape.right(90)
+
+    @staticmethod
     def draw(list_rectangles, list_squares):
         """ i got too much other stuff to do. """
-        pass
+        yPosition = 250
+        xPosition = -300
+        shape = turtle.Turtle()
+        shape.up()
+        shape.color("blue")
+
+        for i in list_rectangles:
+            shape.begin_fill()
+            shape.goto(xPosition, yPosition)
+            Base.createRectangle(i, shape)
+            shape.end_fill()
+            time.sleep(1)
+            xPosition = xPosition + i.width + 10
+
+        yPosition = 100
+        xPosition = -300
+
+        for i in list_squares:
+            shape.begin_fill()
+            shape.goto(xPosition, yPosition)
+            Base.createSquare(i, shape)
+            shape.end_fill()
+            time.sleep(1)
+            xPosition = xPosition + i.size + 10
+
+        shape.done()
