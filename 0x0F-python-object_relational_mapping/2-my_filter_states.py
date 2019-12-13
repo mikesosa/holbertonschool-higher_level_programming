@@ -10,8 +10,8 @@ def getAllStates(username, password, db_name, query):
                          db=db_name, port=3306)
     # Creating a cursor
     cur = db.cursor()
-    cur.execute('SELECT * FROM states WHERE name="{}"\
-                ORDER BY id ASC'.format(query))
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC".format(query))
+
     states = cur.fetchall()
     # Printing resutls
     for state in states:
