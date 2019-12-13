@@ -10,12 +10,12 @@ def getAllStates(username, password, db_name, query):
                          db=db_name, port=3306)
     # Creating a cursor
     cur = db.cursor()
-    cur.execute('SELECT * FROM states')
+    cur.execute('SELECT * FROM states WHERE name="{}"\
+                ORDER BY id ASC'.format(query))
     states = cur.fetchall()
-    # Printing all states
-    for id, name in states:
-        if name == query:
-            print("({}, '{}')".format(id, name))
+    # Printing resutls
+    for state in states:
+        print(state)
     # Close all cursors
     cur.close()
     # Close all databases
