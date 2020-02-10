@@ -21,9 +21,8 @@ class Rectangle {
   }
 
   double () {
-    let x, y;
-    x = this.width * 2;
-    y = this.height * 2;
+    const x = this.width * 2;
+    const y = this.height * 2;
     this.width = x;
     this.height = y;
   }
