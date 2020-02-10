@@ -2,7 +2,7 @@
 
 exports.esrever = function (list) {
   const newArray = [];
-  for (var i = list.length - 1; i >= 0; i--) {
+  for (let i = list.length - 1; i >= 0; i--) {
     newArray.push(list[i]);
   }
   return newArray;
